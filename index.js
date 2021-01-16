@@ -5,7 +5,7 @@ const bodyParser = require("body-parser");
 let MongoClient = require("mongodb").MongoClient;
 let url =
   "mongodb+srv://admin:123456789a@cluster0.zt15y.mongodb.net/test?retryWrites=true&w=majority";
-let port = process.env.PORT || 8000;
+const Port = process.env.PORT || 3000;
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json()); // parse form data client
@@ -60,6 +60,6 @@ app.post("/users", async (req, res) => {
   });
 });
 
-app.listen(port, () => {
-  console.log(`Application is running on ${port}`);
+app.listen(Port, () => {
+  console.log(`Application is running on ${Port}`);
 });

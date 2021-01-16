@@ -11,6 +11,11 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json()); // parse form data client
 app.use(cors());
 
+app.get('/',()=>{
+  res.send({
+    "welcome": "Hello Welcome"
+  })
+})
 // Created
 app.post("/users", async (req, res) => {
   let data = "";

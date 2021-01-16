@@ -7,7 +7,7 @@ let url =
   "mongodb+srv://admin:123456789a@cluster0.zt15y.mongodb.net/test?retryWrites=true&w=majority";
 let port = process.env.PORT || 8000;
 
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json()); // parse form data client
 app.use(cors());
 
